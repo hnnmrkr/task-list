@@ -10,7 +10,7 @@ function addTask(event){
     li.appendChild(document.createTextNode(taskInput.value))
     li.className = 'collection-item'
     const x = document.createElement('a')
-    x.appendChild(document.createTextNode('x'))
+    x.appendChild(document.createTextNode('X'))
     x.setAttribute('href', '#')
     x.className = 'secondary-content'
 
@@ -24,7 +24,7 @@ function addTask(event){
 }
 
 function deleteTask(event){
-    if(event.target.textContent == 'X'){
+    if(event.target.textContent === 'X'){
         if(confirm('Are you sure you want to delete this task?')){
             event.target.parentElement.remove()
         }
